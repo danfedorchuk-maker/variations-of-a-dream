@@ -1,0 +1,13 @@
+{
+  "name": "variations-of-a-dream",
+  "version": "1.0.0",
+  "description": "One dream. Sixteen traditions. Every interpretation.",
+  "private": true,
+  "dependencies": {
+    "formidable": "^3.5.4",
+    "stripe": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
