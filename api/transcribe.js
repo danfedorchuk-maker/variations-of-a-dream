@@ -1,4 +1,3 @@
-cat > api/transcribe.js << 'EOF'
 // api/transcribe.js — Variations of a Dream
 const formidable = require('formidable');
 const fs = require('fs');
@@ -38,4 +37,3 @@ const handler = async (req, res) => {
 };
 
 module.exports = handler;
-EOF
