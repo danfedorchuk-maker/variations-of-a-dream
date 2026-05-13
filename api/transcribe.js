@@ -6,7 +6,8 @@ const handler = async (req, res) => {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) return res.status(500).json({ error: 'GROQ_API_KEY missing' });
   try {
-    const form = formidable({ maxFileSize: 25 * 1024 * 1024 });
+    const { Formidable } = require('formidable');
+const form = new Formidable({ maxFileSize: 25 * 1024 * 1024 });
     const [, files] = await form.parse(req);
     const audioFile = files.audio?.[0];
     if (!audioFile) return res.status(400).json({ error: 'No audio file received' });
